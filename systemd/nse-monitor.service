@@ -1,0 +1,17 @@
+[Unit]
+Description=NSE Announcement Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Coding/nse-monitor
+EnvironmentFile=%h/Coding/nse-monitor/.env
+ExecStart=%h/Coding/nse-monitor/venv/bin/python -m nse_monitor.main
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

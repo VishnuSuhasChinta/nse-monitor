@@ -1,0 +1,45 @@
+poll_interval_seconds: 30
+poll_jitter_seconds: 5
+
+companies:
+  - APOLLO
+  - GROWW
+  - BANKBARODA
+  - KARURVYSYA
+  - AETHER
+  - RAIN
+  - DIXON
+  - GENUSPOWER
+  - HBLENGINE
+  - CGPOWER
+  - AVANTIFEED
+  - PERSISTENT
+  - AVANTEL
+  - ACUTAAS
+  - JSLL
+  - SUPRIYA
+  - SARDAEN
+  - MAZDOCK
+  - RAILTEL
+
+categories:
+
+http:
+  timeout_seconds: 10
+  max_retries: 5
+  backoff_base_seconds: 2
+  backoff_max_seconds: 120
+  respect_retry_after: true
+
+notification:
+  provider: telegram
+  max_per_minute: 20
+  batch_window_seconds: 5
+
+database:
+  path: data/announcements.db
+  wal_mode: true
+
+health:
+  bind_host: 127.0.0.1
+  bind_port: 8787
