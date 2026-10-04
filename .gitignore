@@ -1,10 +1,53 @@
-venv/
+# Python
 __pycache__/
-*.pyc
-.env
-data/
-logs/
-.pytest_cache/
+*.py[cod]
+*$py.class
+*.so
+venv/
 *.egg-info/
 dist/
 build/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg
+MANIFEST/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.coverage.*
+*.cover
+.pytest_cache/
+
+# Project specific
+data/
+logs/
+config/
+
+# Logs
+*.log
+
+# Systemd
+systemd/*.service
